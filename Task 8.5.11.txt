@@ -1,0 +1,15 @@
+# Create `fig` and `ax`
+fig, ax = plt.subplots(figsize=(15, 6))
+
+# Plot `y_mtnoy` on `ax`
+y_mtnoy.plot(ax=ax, label="daily return")
+
+# Add axis labels
+plt.xlabel("Date")
+plt.ylabel("Returns")
+
+# Add title
+plt.title("Time Series of MTNOY Returns");
+
+# Don't delete the code below 👇
+plt.savefig("images/8-5-11.png", dpi=150)

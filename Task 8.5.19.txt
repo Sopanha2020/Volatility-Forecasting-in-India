@@ -1,0 +1,11 @@
+# Import `FitIn` class and `fit_model` function
+from main import FitIn, fit_model
+
+# Instantiate `FitIn` object
+request = FitIn(ticker="MTNOY", use_new_data=False, n_observations=2500, p=1, q=1)
+
+# Build model and fit to data, following parameters in `request`
+fit_out = fit_model(request=request)
+
+# Inspect `fit_out`
+fit_out

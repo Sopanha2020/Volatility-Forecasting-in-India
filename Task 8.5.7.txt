@@ -1,0 +1,8 @@
+sql = "SELECT * FROM 'MTNOY'"
+df_mtnoy_read = pd.read_sql(
+    sql=sql, con=connection, parse_dates=["date"], index_col="date"
+)
+
+print("df_mtnoy_read type:", type(df_mtnoy_read))
+print("df_mtnoy_read shape:", df_mtnoy_read.shape)
+df_mtnoy_read.head()

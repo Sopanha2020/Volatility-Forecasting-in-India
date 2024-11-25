@@ -1,0 +1,16 @@
+# Create `fig` and `ax`
+fig, ax = plt.subplots(figsize=(15, 6))
+
+# Plot standardized residuals
+model.std_resid.plot(ax=ax, label="Standardized Residuals")
+
+# Add axis labels
+plt.xlabel("Date")
+plt.ylabel("Value")
+
+
+# Add title
+plt.title("MTNOY GARCH Model Standardized Residuals")
+
+# Don't delete the code below 👇
+plt.savefig("images/8-5-16.png", dpi=150)

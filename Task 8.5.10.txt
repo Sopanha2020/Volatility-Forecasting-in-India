@@ -1,0 +1,5 @@
+import numpy as np
+mtnoy_annual_volatility = mtnoy_daily_volatility * np.sqrt(252)
+
+print("mtnoy_annual_volatility type:", type(mtnoy_annual_volatility))
+print("MTN Annual Volatility:", mtnoy_annual_volatility)

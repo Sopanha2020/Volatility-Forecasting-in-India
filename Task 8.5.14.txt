@@ -1,0 +1,6 @@
+cutoff_test = int(len(y_mtnoy) * 0.8)
+y_mtnoy_train = y_mtnoy.iloc[:cutoff_test]
+
+print("y_mtnoy_train type:", type(y_mtnoy_train))
+print("y_mtnoy_train shape:", y_mtnoy_train.shape)
+y_mtnoy_train.head()

@@ -1,0 +1,5 @@
+# Insert `MTNOY` data into database
+from data import SQLRepository
+
+repo = SQLRepository(connection=connection)
+response = repo.insert_table(table_name=ticker, records=df_mtnoy, if_exists="replace")

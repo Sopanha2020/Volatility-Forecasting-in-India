@@ -1,0 +1,35 @@
+def wrangle_data(ticker, n_observations):
+
+    """Extract table data from database. Calculate returns.
+
+    Parameters
+    ----------
+    ticker : str
+        The ticker symbol of the stock (also table name in database).
+
+    n_observations : int
+        Number of observations to return.
+
+    Returns
+    -------
+    pd.Series
+        Name will be `"return"`. There will be no `NaN` values.
+    """
+    # Get table from database
+    df = repo.read_table(table_name=ticker, limit=n_observations + 1)
+
+    # Sort DataFrame ascending by date
+    df.sort_index(ascending=True, inplace=True)
+
+    # Create "return" column
+    df["return"] = df["close"].pct_change()*100
+
+    # Return returns
+    return df["return"].dropna()
+
+
+y_mtnoy = wrangle_data(ticker="MTNOY", n_observations=2500)
+
+print("y_mtnoy type:", type(y_mtnoy))
+print("y_mtnoy shape:", y_mtnoy.shape)
+y_mtnoy.head()

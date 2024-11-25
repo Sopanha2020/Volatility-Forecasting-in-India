@@ -1,0 +1,4 @@
+mtnoy_daily_volatility = y_mtnoy.std()
+
+print("mtnoy_daily_volatility type:", type(mtnoy_daily_volatility))
+print("MTN Daily Volatility:", mtnoy_daily_volatility)

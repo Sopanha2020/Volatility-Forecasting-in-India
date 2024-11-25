@@ -1,0 +1,16 @@
+# Create `fig` and `ax`
+fig, ax = plt.subplots(figsize=(15, 6))
+
+# Create PACF of squared returns
+plot_pacf(y_mtnoy**2, ax=ax)
+
+# Add axis labels
+plt.xlabel("Lag [days]")
+plt.ylabel("Correlation Coefficient")
+
+
+# Add title
+plt.title("PACF of MTNOY Squared Returns");
+
+# Don't delete the code below 👇
+plt.savefig("images/8-5-13.png", dpi=150)

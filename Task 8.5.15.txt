@@ -1,0 +1,13 @@
+from arch import arch_model
+# Build and train model
+model = arch_model(
+    y_mtnoy_train,
+    p=3,
+    q=3,
+    rescale=False
+).fit(disp=0)
+
+print("model type:", type(model))
+
+# Show model summary
+model.summary()

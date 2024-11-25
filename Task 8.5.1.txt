@@ -1,0 +1,16 @@
+ticker = "MTNOY"
+output_size = "full"
+data_type = "json"
+
+url = (
+    "https://learn-api.wqu.edu/1/data-services/alpha-vantage/query?"
+    "function=TIME_SERIES_DAILY&"
+    f"symbol={ticker}&"
+    f"outputsize={output_size}&"
+    f"datatype={data_type}&"
+    f"apikey={settings.alpha_api_key}"
+)
+
+print("url type:", type(url))
+url
+

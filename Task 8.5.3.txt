@@ -1,0 +1,4 @@
+response_code = response.status_code
+
+print("code type:", type(response_code))
+response_code

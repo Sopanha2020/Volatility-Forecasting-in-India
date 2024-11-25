@@ -1,0 +1,7 @@
+from data import AlphaVantageAPI
+av = AlphaVantageAPI()
+ticker = "MTNOY"
+df_mtnoy = av.get_daily(ticker=ticker)
+
+print("df_mtnoy type:", type(df_mtnoy))
+df_mtnoy.head()

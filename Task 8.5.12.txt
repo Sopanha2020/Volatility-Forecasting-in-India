@@ -1,0 +1,16 @@
+# Create `fig` and `ax`
+fig, ax = plt.subplots(figsize=(15, 6))
+
+# Create ACF of squared returns
+plot_acf(y_mtnoy**2, ax=ax)
+
+# Add axis labels
+plt.xlabel("Lag [days]")
+plt.ylabel("Correlation Coefficient")
+
+
+# Add title
+plt.title("ACF of MTNOY Squared Returns");
+
+# Don't delete the code below 👇
+plt.savefig("images/8-5-12.png", dpi=150)

@@ -1,0 +1,9 @@
+# URL of `/fit` path
+url = "http://localhost:8008/fit"
+# Data to send to path
+json = {"ticker": "SHOPERSTOP.BSE", "n_days":5}
+# Response of post request
+response = requests.post(url=url, json=json)
+
+print("response type:", type(response))
+print("response status code:", response.status_code)

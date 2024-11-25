@@ -1,0 +1,15 @@
+# Import `build_model` function
+from main import build_model
+
+# Build model using new `MTNOY` data
+model = build_model(ticker="MTNOY", use_new_data=True)
+
+# Wrangle `MTNOY` returns
+model.wrangle_data(n_observations=2500)
+
+# Fit GARCH(1,1) model to data
+model.fit(p=1, q=1)
+
+# Does model have AIC and BIC attributes?
+assert hasattr(model, "aic")
+assert hasattr(model, "bic")

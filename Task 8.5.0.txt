@@ -1,0 +1,24 @@
+%load_ext autoreload
+%autoreload 2
+
+import wqet_grader
+from arch.univariate.base import ARCHModelResult
+
+wqet_grader.init("Project 8 Assessment")
+
+
+# Import your libraries here
+import os
+import sqlite3
+from glob import glob
+import matplotlib.pyplot as plt
+import numpy as np
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+import joblib
+import pandas as pd
+import requests
+import wqet_grader
+from arch.univariate.base import ARCHModelResult
+from config import settings
+from data import SQLRepository
+from IPython.display import VimeoVideo
